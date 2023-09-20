@@ -27,7 +27,7 @@ while (intentos > 0 && adivinar !== palabra) {
     Ademas de mostrar de alguna manera como se van completando las casillas
     
     Hay que usar return ya sé
-    */
+   
 
 
 
@@ -35,7 +35,7 @@ while (intentos > 0 && adivinar !== palabra) {
 
 
 
-
+*/
 //----------------------VARIABLES--------------------------------
 
 const palabraMisteriosa = RandomWordGenerator();  //carga una palabra random
@@ -52,12 +52,14 @@ while (intentos > 0 && todasLasLetrasEnPalabraM(palabraMisteriosa, palabraFinal)
   letraAProbar = prompt("Ingrese una letra para adivinar la palabra: ");
 
   if (compararLetraConPalabra(letraAProbar, palabraMisteriosa)) {
-    for (let i = 0; i < palabraMisteriosa.length; i++) {
+    let i = 0
+    while (i < palabraMisteriosa.length) {
       if (palabraMisteriosa[i] == letraAProbar) {
         alert("Esta la letra: " + letraAProbar + " en la posicion: " + i);
         palabraFinal += letraAProbar;       
       } else {
         intentos -= 1;
+        i++;
         alert("No se encuentra esa letra, se le resta un intento, le quedan: " +intentos);
       }
     }
