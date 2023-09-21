@@ -21,20 +21,23 @@ do {
     }
   }
   if (matches.length > 0) {
-    alert("se encontro la letra en la posicion: " + matches);
+    //alert("se encontro la letra en la posicion: " + matches);
+    console.log("se encontro la letra en la posicion: " + matches); // nuevo
   } else {
     tries -= 1;
-    alert( "No se encuentra esa letra, se le resta un intento, le quedan: " + tries
+    console.log( "No se encuentra esa letra, se le resta un intento, le quedan: " + tries
     );
+    //alert( "No se encuentra esa letra, se le resta un intento, le quedan: " + tries );
   }
 } while (tries > 0 && allCharsOnMisteryWord());
 
 if (allCharsOnMisteryWord() && tries >= 0) {
-  alert("Has adivinado!, la palabra secreta era: " + misteryWord);
+  console.log( "Has adivinado!, la palabra secreta era: " + misteryWord);
+  //alert("Has adivinado!, la palabra secreta era: " + misteryWord);
 } else {
-  alert(
-    "Te has quedado sin tries, la palabra secreta era: " + misteryWord
-  );
+  console.log("Te has quedado sin tries, la palabra secreta era: " + misteryWord)
+  /* alert( "Te has quedado sin tries, la palabra secreta era: " + misteryWord
+  ); */
 }
 
 //-----------------------------FUNCIONES-----------------------------
